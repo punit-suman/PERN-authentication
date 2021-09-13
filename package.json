@@ -1,0 +1,31 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "concurrently": "^6.2.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "nodemon": "^2.0.12",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "server-dep": "npm install",
+    "client-dep": "cd client && npm install",
+    "all-dep": "npm run server-dep && npm run client-dep",
+    "server-dev": "npx nodemon index.js",
+    "client-dev": "cd client && npm run start",
+    "start-dev": "concurrently \"npm run server-dev\" \"npm run client-dev\"",
+    "build-client": "cd client && npm run build",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
