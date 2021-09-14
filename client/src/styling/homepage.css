@@ -24,12 +24,11 @@
 
 .navbar .main-container .left-menu-expand {
     display: none;
-    margin-top: 8px;
+    margin-top: 10px;
     margin-left: 25px;
     background-color: teal;
-    border: 1px solid rgb(44, 44, 44);
-    border-radius: 10px;
-    padding: 4px 20px;
+    border-radius: 5px;
+    padding: 3px 5px;
     transition: 0.1s;
 }
 
@@ -37,9 +36,10 @@
     background-color: rgb(0, 175, 175);
 }
 
-.navbar .main-container .left-menu-expand .items {
-    width: 20px;
-    border-bottom: 1.5px solid white;
+.navbar .main-container .left-menu-expand .bar {
+    width: 25px;
+    background-color: white;
+    height: 1px;
     margin: 5px 0;
     text-align: center;
     vertical-align: middle;
@@ -103,7 +103,6 @@
     background-color: teal;
 }
 
-
 .navbar .main-container .expand-menu.show {
     display: none;
 }
@@ -113,7 +112,8 @@
 }
 
 .navbar .main-container .expand-menu .items {
-    padding: 7px 20px;
+    padding: 10px 20px;
+    font-size: 15px;
 }
 
 .navbar .main-container .expand-menu .items .link {
@@ -158,8 +158,9 @@
     .navbar .main-container .expand-menu.show {
         display: block;
         background-color: teal;
-        border: 1px solid rgb(44, 44, 44);
-        border-top: 0px;
-        width: 50%;
+        margin-top: 5px;
+        margin-left: 5px;
+        box-shadow: 1px 2px 2px rgb(44, 44, 44);
+        width: 70%;
     }
 }

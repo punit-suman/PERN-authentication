@@ -10,7 +10,7 @@ class PageNotFound extends React.Component {
     setMessage = (value) => {
         this.setState({message: value})
     }
-    async componentDidMount() {
+    componentDidMount() {
         this.setMessage("Error 404: Page Not Found!")
     }
     render() {

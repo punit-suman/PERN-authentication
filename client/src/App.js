@@ -5,7 +5,8 @@ import "./App.css";
 
 import Homepage from './routes/home'
 import LoginPage from './routes/loginpage'
-import Profile from './routes/profile';
+import Profile from './routes/profile'
+import PageNotFound from './routes/pagenotfound'
 
 function App() {
     const [loginDetail, setLoginDetail] = useState('')
@@ -27,8 +28,8 @@ function App() {
     if (!responseStatus) {
         return (
             <div>
-                <div class="loader-wrapper">
-                    <div class="loader"></div>
+                <div className="loader-wrapper">
+                    <div className="loader"></div>
                 </div>
             </div>
         )
@@ -39,7 +40,9 @@ function App() {
                 <Switch>
                     <Route path="/" component={() => (<Homepage loginDetail={loginDetail} />)} exact />
                     <Route path="/authenticate" component={() => (<LoginPage loginDetail={loginDetail} />)} exact />
-                    <Route path="/profile" component={() => (<Profile loginDetail={loginDetail} responseStatus = {responseStatus} />)} exact />
+                    <Route path="/u/*/*" component={PageNotFound} />
+                    <Route path="/u/*" component={() => (<Profile loginDetail={loginDetail} responseStatus = {responseStatus} />)} exact />
+                    <Route component={PageNotFound} />
                 </Switch>
             </BrowserRouter>
 
