@@ -23,7 +23,8 @@
     "client-dev": "cd client && npm run start",
     "start-dev": "concurrently \"npm run server-dev\" \"npm run client-dev\"",
     "build-client": "cd client && npm run build",
-    "start": "node index.js"
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
