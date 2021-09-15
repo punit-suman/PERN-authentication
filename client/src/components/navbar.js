@@ -11,7 +11,7 @@ class Navbar extends React.Component {
         }
     }
     logout = e => {
-        Axios.get('/logoutAPI').then((response) => {
+        Axios.get('/api/logout').then((response) => {
             console.log(response.data)
         })
         window.location.reload()

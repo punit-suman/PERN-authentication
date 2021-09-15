@@ -5,9 +5,6 @@ import Axios from 'axios';
 import Registration from '../components/registration'
 import Login from '../components/login'
 
-import '../styling/loginpage.css'
-
-
 export default function LoginPage({loginDetail}) {
     
     const loginStatus = loginDetail !== ""

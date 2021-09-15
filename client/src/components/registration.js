@@ -18,7 +18,7 @@ class Registration extends React.Component {
     }
     setUsername = async (val) => {
         this.setState({username: val}, () => {
-            Axios.get(`/checkUsernameAPI/${this.state.username}`).then((response) => {
+            Axios.get(`/api/checkusername/${this.state.username}`).then((response) => {
                 if (response.data.message === "username present") {
                     this.setUsernameRequired(true)
                     this.setState({usernamepresent: true})
@@ -104,7 +104,7 @@ class Registration extends React.Component {
         if (error) {
             return
         }
-        await Axios.post('/registerAPI', {
+        await Axios.post('/api/register', {
             username: this.state.username,
             password: this.state.password,
             firstname: this.state.firstname,

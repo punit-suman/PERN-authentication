@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import Axios from 'axios';
-import "./App.css";
+import Axios from 'axios'
+
+import "./App.css"
+import "./styling/navbar.css"
+import "./styling/loginpage.css"
 
 import Homepage from './routes/home'
 import LoginPage from './routes/loginpage'
@@ -14,7 +17,7 @@ function App() {
     Axios.defaults.withCredentials = true
     useEffect(() => {
         function checkLoggedIn() {
-        Axios.get("/loginAPI").then((response)=>{
+        Axios.get("/api/loggedin").then((response)=>{
             if (response.data.LoggedIn) {
                 setLoginDetail(response.data.user)
             }

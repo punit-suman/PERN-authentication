@@ -65,7 +65,7 @@ class Login extends React.Component {
         if (error) {
             return
         }
-        await Axios.post('/loginAPI', {
+        await Axios.post('/api/login', {
             username: this.state.username,
             password: this.state.password
         }).then((response) => {
