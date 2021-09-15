@@ -63,6 +63,7 @@ class Login extends React.Component {
             this.setPasswordRequired(false)
         }
         if (error) {
+            this.setMessage("Please fill required inputs.")
             return
         }
         await Axios.post('/api/login', {

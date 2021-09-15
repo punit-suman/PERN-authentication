@@ -19,6 +19,7 @@ module.exports = (app, pool, bcrypt) => {
         try {
             const username = req.body.username
             const password = req.body.password
+            console.log(username, password)
             
             pool.query('Select * from users where username=$1', [username], (err, result) => {
                 if (err) {
