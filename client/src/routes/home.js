@@ -13,6 +13,8 @@ export default function Homepage({loginDetail}) {
             <div className="body-container">
                 <div className="message">
                     Welcome to the website.
+                    <a href='/privacyPolicy.html' target='_blank'>Privacy Policy</a>
+                    <a href='/termsAndConditions.html' target='_blank'>T&C</a>
                 </div>
             </div>
         </div>
